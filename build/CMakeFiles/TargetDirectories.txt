@@ -1,0 +1,3 @@
+/Users/zac/Documents/SoftSys/C-demo-engine/build/CMakeFiles/demo.dir
+/Users/zac/Documents/SoftSys/C-demo-engine/build/CMakeFiles/edit_cache.dir
+/Users/zac/Documents/SoftSys/C-demo-engine/build/CMakeFiles/rebuild_cache.dir

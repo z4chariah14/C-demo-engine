@@ -1,0 +1,32 @@
+cmake_minimum_required(VERSION 3.22)
+
+project(CDemoEngine
+    VERSION 1.0
+    LANGUAGES C
+)
+
+set(CMAKE_C_STANDARD 11) #compiler on clang might not fully support c23 by default
+set(CMAKE_C_STANDARD_REQUIRED True)
+
+find_package(glfw3 REQUIRED)
+#find_package(cglm REQUIRED)
+find_package(OpenGL REQUIRED)
+
+include_directories(
+    include 
+    external
+)
+
+add_executable(demo src/main.c src/glad.c src/stb_loader.c)
+
+target_link_libraries(
+    demo 
+    PRIVATE
+        glfw
+        OpenGL::GL
+)
+
+if(APPLE)
+    target_link_libraries(demo PRIVATE "-framework CoreAudio" "-framework CoreFoundation")
+endif()
+    
