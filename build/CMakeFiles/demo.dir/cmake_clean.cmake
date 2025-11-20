@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/demo.dir/src/demo.c.o"
+  "CMakeFiles/demo.dir/src/demo.c.o.d"
   "CMakeFiles/demo.dir/src/glad.c.o"
   "CMakeFiles/demo.dir/src/glad.c.o.d"
-  "CMakeFiles/demo.dir/src/main.c.o"
-  "CMakeFiles/demo.dir/src/main.c.o.d"
   "CMakeFiles/demo.dir/src/stb_loader.c.o"
   "CMakeFiles/demo.dir/src/stb_loader.c.o.d"
   "demo"

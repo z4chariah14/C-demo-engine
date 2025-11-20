@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/zac/Documents/SoftSys/C-demo-engine/src/demo.c" "CMakeFiles/demo.dir/src/demo.c.o" "gcc" "CMakeFiles/demo.dir/src/demo.c.o.d"
   "/Users/zac/Documents/SoftSys/C-demo-engine/src/glad.c" "CMakeFiles/demo.dir/src/glad.c.o" "gcc" "CMakeFiles/demo.dir/src/glad.c.o.d"
-  "/Users/zac/Documents/SoftSys/C-demo-engine/src/main.c" "CMakeFiles/demo.dir/src/main.c.o" "gcc" "CMakeFiles/demo.dir/src/main.c.o.d"
   "/Users/zac/Documents/SoftSys/C-demo-engine/src/stb_loader.c" "CMakeFiles/demo.dir/src/stb_loader.c.o" "gcc" "CMakeFiles/demo.dir/src/stb_loader.c.o.d"
   )
 
