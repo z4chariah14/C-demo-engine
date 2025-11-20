@@ -42,5 +42,5 @@ The core audio engine uses a combination of **FM Synthesis** and a percussive **
 
 1.  **Carrier Wave:** Sine wave set to the note frequency.
 2.  **Modulator Wave:** A separate sine wave running at 2x the carrier frequency.
-3.  **Synthesis:** The phase of the carrier is distorted by the modulator, creating the signature "growl" or harmonic-rich texture: `sin(phase + (sin(mod_phase) * amount))`
-4.  **Rhythm:** The main loop sends `audio_slap` events at a synchronized, high tempo (8 ticks/sec), triggering a fast Attack / Exponential Decay envelope to simulate a slap bass rhythm.
+3.  **Synthesis:** The phase of the carrier is distorted by the modulator, creating the signature harmonic texture: `sin(phase + (sin(mod_phase) * amount))`
+4.  **Rhythm:** The main loop sends `audio_slap` events at a synchronized, high tempo (8 ticks/sec) rhythm.
