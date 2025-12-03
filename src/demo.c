@@ -13,7 +13,6 @@
 #include <stb_image.h>
 #include <cglm/cglm.h> 
 #include <pthread.h>
-#include <mach/mach_time.h> 
 
 // Global mutex to protect audio state between Main Thread and Audio Thread
 static pthread_mutex_t g_mutex;
@@ -47,9 +46,6 @@ static void AQCallback(void *ud, AudioQueueRef q, AudioQueueBufferRef buf){
     // causing a nasty "pop".
     pthread_mutex_lock(&g_mutex);
     
-    // [Performance Check] 
-    // Measure how long the synthesis math takes using low-level Mach timers
-    uint64_t start = mach_absolute_time();
     
     // Carrier frequency setup
     double step = (2.0 * M_PI * g_as.freq) / sr;
@@ -95,9 +91,6 @@ static void AQCallback(void *ud, AudioQueueRef q, AudioQueueBufferRef buf){
         }
     }
 
-    // Stop the performance timer
-    uint64_t end = mach_absolute_time();
-    uint64_t elapsed = end - start;
     
     // Done modifying shared state
     pthread_mutex_unlock(&g_mutex);
@@ -105,13 +98,6 @@ static void AQCallback(void *ud, AudioQueueRef q, AudioQueueBufferRef buf){
     // Tell the OS how many bytes we wrote
     buf->mAudioDataByteSize = (UInt32)(N * 2); 
 
-    // Occasionally print the synth performance stats
-    // (Check this in terminal to prove we aren't blocking the thread too long)
-    static int count = 0;
-    if (count++ > 100){
-        printf("Synth took %llu mach ticks\n", elapsed);
-        count = 0; 
-    }
 
     // Hand the buffer back to the OS to play
     AudioQueueEnqueueBuffer(q, buf, 0, NULL);
