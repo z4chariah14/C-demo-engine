@@ -208,7 +208,6 @@ int main(){
         return -1;
     }
 
-    glViewport(0,0,1280,720);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     glEnable(GL_DEPTH_TEST); 
     
