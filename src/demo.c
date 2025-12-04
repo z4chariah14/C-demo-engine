@@ -108,10 +108,10 @@ static void AQCallback(void *ud, AudioQueueRef q, AudioQueueBufferRef buf){
     // Occasionally print the synth performance stats
     // (Check this in terminal to prove we aren't blocking the thread too long)
     static int count = 0;
-    if (count++ > 100){
-        printf("Synth took %llu mach ticks\n", elapsed);
-        count = 0; 
-    }
+    //if (count++ > 100){
+    //    printf("Synth took %llu mach ticks\n", elapsed);
+      //  count = 0; 
+    //}
 
     // Hand the buffer back to the OS to play
     AudioQueueEnqueueBuffer(q, buf, 0, NULL);
