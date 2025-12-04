@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/Users/zac/Documents/SoftSys/C-demo-engine/build",
+  "command": "/usr/bin/cc  -I/Users/zac/Documents/SoftSys/C-demo-engine/include -I/Users/zac/Documents/SoftSys/C-demo-engine/external -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -std=gnu11 -o CMakeFiles/demo.dir/src/demo.c.o -c /Users/zac/Documents/SoftSys/C-demo-engine/src/demo.c",
+  "file": "/Users/zac/Documents/SoftSys/C-demo-engine/src/demo.c",
+  "output": "CMakeFiles/demo.dir/src/demo.c.o"
+},
+{
+  "directory": "/Users/zac/Documents/SoftSys/C-demo-engine/build",
+  "command": "/usr/bin/cc  -I/Users/zac/Documents/SoftSys/C-demo-engine/include -I/Users/zac/Documents/SoftSys/C-demo-engine/external -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -std=gnu11 -o CMakeFiles/demo.dir/src/glad.c.o -c /Users/zac/Documents/SoftSys/C-demo-engine/src/glad.c",
+  "file": "/Users/zac/Documents/SoftSys/C-demo-engine/src/glad.c",
+  "output": "CMakeFiles/demo.dir/src/glad.c.o"
+},
+{
+  "directory": "/Users/zac/Documents/SoftSys/C-demo-engine/build",
+  "command": "/usr/bin/cc  -I/Users/zac/Documents/SoftSys/C-demo-engine/include -I/Users/zac/Documents/SoftSys/C-demo-engine/external -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -std=gnu11 -o CMakeFiles/demo.dir/src/stb_loader.c.o -c /Users/zac/Documents/SoftSys/C-demo-engine/src/stb_loader.c",
+  "file": "/Users/zac/Documents/SoftSys/C-demo-engine/src/stb_loader.c",
+  "output": "CMakeFiles/demo.dir/src/stb_loader.c.o"
+}
+]
